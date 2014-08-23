@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>Test</title>
+</head>
+<body>
+
+<!-- Import the engine -->
+<script src="engine.js"></script>
+
+<!-- Example Of Using The Engine -->
+<script>
+// create sprites and add them to array
+var mySprite = new Sprite("assets/sprite.jpg", 0, 0, 100, 100);
+var myOtherSprite = new Sprite("assets/sprite.jpg", 250, 250, 100, 100);
+var sprites = [mySprite, myOtherSprite];
+
+// add sprites to screen, and add screens to array
+var splashScreen = new Screen(sprites);
+var screens = [splashScreen];
+
+// start game with array of screens
+var myGame = new Game(canvas, 500, 500, screens);
+
+
+</script>
+
+</body>
+</html>
